@@ -1,0 +1,31 @@
+
+<beans>
+    <bean id="detalleExport" class="com.salesforce.dataloader.process.ProcessRunner" singleton="false">
+        <description>detalleExport obtiene las visitas realizadas en un periodo de 3 meses</description>
+        <property name="name" value="detalleExport"/>
+        <property name="configOverrideMap">
+            <map>
+	  <entry key="sfdc.endpoint" value="https://maxbbvabancomer.my.salesforce.com"/>
+	  <entry key="sfdc.username" value="alejandro.vega@bbva.com"/>
+	  <entry key="sfdc.password" value="ff58ba429f08779f041c32e4c5b70f0ac9e3d14b71ae480e1a79068e7b99a1df4f0d74c62e2144c6"/>                                                                          
+          <entry key="sfdc.proxyHost" value="150.100.210.40"/>
+	  <entry key="sfdc.proxyPort" value="8080"/>
+
+	  <entry key="sfdc.debugMessages" value="true"/>
+	  <entry key="sfdc.debugMessagesFile" value="C:\Bancomer\Irene\accountInsertSoapTrace.log"/> 
+	  <entry key="sfdc.timeoutSecs" value="600"/>
+	  <entry key="sfdc.loadBatchSize" value="200"/>
+
+	  <entry key="process.encryptionKeyFile" value="C:\Bancomer\Irene\key.txt"/>
+	  <entry key="process.outputError" value="C:\Bancomer\Irene\Errores.csv"/>
+	  <entry key="process.enableExtractSuccessOutput" value="true"/>
+
+	  <entry key="process.operation" value="extract"/>
+                <entry key="dataAccess.type" value="csvWrite"/>
+	  <entry key="dataAccess.name" value="C:\Users\XM060IY\Desktop\Bancomer\Irene\BEyG_Medallia.csv"/>
+	  <entry key="sfdc.entity" value="Detalle__c"/>
+	  <entry key="sfdc.extractionSOQL" value="Select NB_CLIENTE__c, NB_EMAIL__c, FH_OPERACION__c, NB_ZONA__c,CR__c, CD_SEGMENTO__c, CD_SECTOR__c, CD_CLIENTE__c, CD_PAIS__c, CD_EDO__c, NU_TEL_FIJO__c, NU_CELULAR__c, RAZON_SOCIAL__c, TITULO__c, No_de_cliente__c FROM Detalle__c WHERE Registro_Irene__c = TRUE ORDER BY NB_EMAIL__c, FH_OPERACION__c DESC"/>
+            </map>
+        </property>
+    </bean>
+</beans>
