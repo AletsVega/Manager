@@ -1,4 +1,4 @@
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
 <beans>
     <bean id="detalleExport" class="com.salesforce.dataloader.process.ProcessRunner" singleton="false">
         <description>detalleExport obtiene las visitas realizadas en un periodo de 3 meses</description>
