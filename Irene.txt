@@ -5,13 +5,7 @@
         <property name="name" value="detalleExport"/>
         <property name="configOverrideMap">
             <map>
-	  <entry key="sfdc.endpoint" value="https://maxbbvabancomer.my.salesforce.com"/>
-	  <entry key="sfdc.username" value="alejandro.vega@bbva.com"/>
-	  <entry key="sfdc.password" value="ff58ba429f08779f041c32e4c5b70f0ac9e3d14b71ae480e1a79068e7b99a1df4f0d74c62e2144c6"/>                                                                          
-          <entry key="sfdc.proxyHost" value="150.100.210.40"/>
-	  <entry key="sfdc.proxyPort" value="8080"/>
-
-	  <entry key="sfdc.debugMessages" value="true"/>
+	  <entry key="sfdc.endpoint"ssages" value="true"/>
 	  <entry key="sfdc.debugMessagesFile" value="C:\Bancomer\Irene\accountInsertSoapTrace.log"/> 
 	  <entry key="sfdc.timeoutSecs" value="600"/>
 	  <entry key="sfdc.loadBatchSize" value="200"/>
